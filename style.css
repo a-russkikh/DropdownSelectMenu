@@ -30,6 +30,11 @@ body {
 .select-btn i {
   font-size: 25px;
 }
+.select-menu.active .select-btn i {
+  transform: rotate(-180deg);
+  transition: 0.3s;
+}
+
 .select-menu .options {
   position: relative;
   padding: 20px;
@@ -37,6 +42,10 @@ body {
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+.select-menu.active .options {
+  display: block;
 }
 .options .option {
   display: flex;
@@ -56,8 +65,6 @@ body {
 }
 
 .option .option-text {
-	font-size:18px;
-	color: #333;
-}
-	
+  font-size: 18px;
+  color: #333;
 }
